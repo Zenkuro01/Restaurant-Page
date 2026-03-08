@@ -1,4 +1,4 @@
-export const pageLoad = () => {
+export const pageLoadHome = () => {
   const heroImage = document.createElement("img");
   heroImage.classList.add("hero-img");
   heroImage.src =
@@ -14,9 +14,6 @@ export const pageLoad = () => {
   const paragraph_2 = document.createElement("p");
   paragraph_2.innerText = `Whether you're joining us for a quiet dinner, a family gathering, or a late evening glass of wine, we aim to make every visit feel warm and memorable.`;
 
-  const contentContainer = document.querySelector("#content");
-  contentContainer.appendChild(heroImage);
-  contentContainer.appendChild(welcomeText);
-  contentContainer.appendChild(paragraph_1);
-  contentContainer.appendChild(paragraph_2);
+  const content = document.querySelector("#content");
+  content.append(heroImage, welcomeText, paragraph_1, paragraph_2);
 };
